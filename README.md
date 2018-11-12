@@ -7,11 +7,11 @@ It uses a three-valued type system to statically check non-interference. In addi
 ## Usage
 The interface (_interface.jar_) is rather simple. There are two tabs: _Channels_ and _Code_. The _Channels_ tab is where you can define the communication channels that you want to use in your code (_privateChannel_ and _publicChannel_ are already defined by default). To remove one or more channels, select them and press the delete key.
 
-<img src="https://i.imgur.com/Jw8S69f.png" width="50%" />
+<p align="center"><img src="https://i.imgur.com/Jw8S69f.png" width="66%" /></p>    
 
 The _Code_ tab allows you to enter the code of the program that you want to analyze. To analyze the code, press the _Analyze_ button or press Ctrl+Enter. The output of the analysis is then shown on the right side of the application. If the analyzer has detected an error, whether it is a lexical, syntactic, semantic or information flow error, a message explaining the error (when possible) will be found at the end of the analyzer's output. If the code requires an instrumentation in order to be secure, then an instrumented version of the program will be generated an displayed on the right side.
 
-<img src="https://i.imgur.com/5Tvv6Sj.png" width="50%" />
+<p align="center"><img src="https://i.imgur.com/5Tvv6Sj.png" width="66%" /></p>
 
 ### Examples
 #### Example 1 (rejected.ulsifa)
