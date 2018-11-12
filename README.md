@@ -1,1 +1,5 @@
 # ulsifa
+Ulsifa is a tool that performs secure information flow analyses on a simple imperative language to ensure that no sensitive information is inadvertently leaked explicitly or implicitly. If necessary, Ulsifa also produces an instrumented version of the code to do additional checks at runtime.
+
+## Approach
+Ulsifa uses a three-valued type system to statically check non-interference. In addition to the usual two main security levels, public (or Low) and private (or Hight), a third security level, Unknown, is used to capture the possibility that we may not know, before execution, whether the information is public or private. Standard two-valued analysis has no choice but to be pessimistic with uncertainty and hence generate false positives. If uncertainty arises during the analysis, the instruction in cause is tagged; in a second step, instrumentation at every such point together with dynamic analysis will allow us to head to a more precise result than purely static approaches. This reduces the number of false positives, while introducing a light runtime overhead by instrumenting only when there is a need for it.
